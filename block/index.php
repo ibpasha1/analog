@@ -21,7 +21,7 @@
       <meta itemprop="name" content="Ibrahim Pasha">
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
       <link rel="stylesheet" href="../css/index.css">
-      <title>Kash Goudarzi</title>
+      <title>persons name</title>
    </head>
    <body>
       <nav class=" animated fadeIn">
@@ -38,9 +38,9 @@
       </nav>
       <div id="app">
          <div class="center">
-            <p>Hey! I'm Kash Goudarzi.</p>
+            <p id="name"></p>
             <br>
-            <p>I'm a software engineer based in Seattle 🌆</p>
+            <p id="caption"></p>
             <hr>
             <p>By me:</p>
             <ul>
@@ -108,7 +108,17 @@
             </ul>
          </div>
       </div>
-      <script data-cfasync="false" src="/cdn-cgi/scripts/af2821b0/cloudflare-static/email-decode.min.js"></script>
    </body>
-   <script type="text/javascript" src="/client/scripts/index.js"></script>
+   <script type="text/javascript" src="js/app.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function() {
+    var name = 'Ibrahim';
+    var location = 'Silver Spring';
+    var occupation = 'ME';
+
+    document.getElementById("name").innerHTML = 'Hey! Im' +'&nbsp;' +  name ;
+    document.getElementById("caption").innerHTML = 'Im a' +'&nbsp;' + occupation + '&nbsp;' + 'based in' +'&nbsp;' +  location ;
+   });
+</script>
 </html>
