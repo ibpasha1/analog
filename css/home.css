@@ -1,0 +1,80 @@
+.home-wrapper .top-display {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: #F5F8FA;
+  height: 400px; }
+  .home-wrapper .top-display .center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+  .home-wrapper .top-display h1 {
+    font-family: PT Serif, "Helvetica Neue", Helvetica, sans-serif;
+    opacity: 0.6;
+    font-size: 2rem;
+    color: #777777; }
+.home-wrapper hr {
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 95%;
+  max-width: 700px;
+  display: table;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.3); }
+.home-wrapper .sign-up {
+  display: flex;
+  justify-content: center;
+  margin: 50px auto 0; }
+  .home-wrapper .sign-up div {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  .home-wrapper .sign-up a {
+    display: table;
+    padding: 10px 35px;
+    color: #767676; }
+  .home-wrapper .sign-up .sign-up-button {
+    background-color: #007EE5;
+    color: white; }
+.home-wrapper .about-us {
+  display: table;
+  margin: 50px auto;
+  width: 95%;
+  max-width: 700px; }
+  .home-wrapper .about-us h2 {
+    font-size: 1.4rem;
+    margin-bottom: 20px; }
+  .home-wrapper .about-us p {
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    font-weight: 300; }
+.home-wrapper .get-started-wrapper {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1000px;
+  margin: 100px auto 100px; }
+  .home-wrapper .get-started-wrapper > a {
+    width: 29%;
+    height: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.09);
+    position: relative;
+    top: 0;
+    transition: all 0.1s ease-in-out; }
+  .home-wrapper .get-started-wrapper > a:hover {
+    box-shadow: 0 30px 25px rgba(0, 0, 0, 0.12);
+    top: -10px; }
+  .home-wrapper .get-started-wrapper h2 {
+    color: white;
+    text-align: center;
+    font-size: 2rem; }
+
+/*# sourceMappingURL=home.css.map */

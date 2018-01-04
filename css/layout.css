@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  background-color: #F5F8FA;
+  margin-top: 50px; }
+  .footer > div {
+    display: table;
+    width: 95%;
+    max-width: 700px;
+    display: flex;
+    margin: 50px 0;
+    justify-content: space-between; }
+  .footer li:not(:first-of-type) {
+    font-weight: 400;
+    opacity: 0.7; }
+
+/*# sourceMappingURL=layout.css.map */

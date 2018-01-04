@@ -1,0 +1,105 @@
+.home-wrapper {
+    .top-display {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        background-color: #F5F8FA;
+        height: 400px;
+
+        .center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            font-family: PT Serif, "Helvetica Neue", Helvetica, sans-serif;
+            opacity: 0.6;
+            font-size: 2rem;
+            color: #777777;
+        }
+    }
+
+    hr {
+        padding: 0;
+        border: 0;
+        height: 1px;
+        width: 95%;
+        max-width: 700px;
+        display: table;
+        margin: auto;
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
+    .sign-up {
+        display: flex;
+        justify-content: center;
+        margin: 50px auto 0;
+
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        a {
+            display: table;
+            padding: 10px 35px;
+            color: #767676
+        }
+
+        .sign-up-button {
+            background-color: #007EE5;
+            color: white
+        }
+    }
+    .about-us {
+        display: table;
+        margin: 50px auto;
+        width: 95%;
+        max-width: 700px;
+
+        h2 {
+            font-size: 1.4rem;
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+            font-weight: 300;
+        }
+    }
+    .get-started-wrapper {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1000px;
+        margin: 100px auto 100px;
+        > a {
+            width: 29%;
+            height: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 10px;
+            box-shadow: 0 20px 20px rgba(0, 0, 0, 0.09);
+            position: relative;
+            top: 0;
+            transition: all 0.1s ease-in-out;
+        }
+
+        > a:hover {
+            box-shadow: 0 30px 25px rgba(0, 0, 0, 0.12);
+            top: -10px;
+        }
+
+        h2 {
+            color: white;
+            text-align: center;
+            font-size: 2rem;
+        }
+    }
+}
