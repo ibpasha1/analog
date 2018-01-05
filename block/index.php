@@ -24,87 +24,56 @@
       <title>persons name</title>
    </head>
    <body>
-      <nav class=" animated fadeIn">
-         <ul class=" gsd hint hint--right animated fadeInLeft" data-hint="Menu Description">
-            <li>
-               <a href='#page1' style="font-weight:900; font-size:xx-large">&#9776;</a>
-               <ul class="animated fadeInLeft">
-                  <li class="hint hint--right animated fadeIn" data-hint="&#9776;"><a href='#'>Sub Page 1</a></li>
-                  <li><a href='#'>Sub Page 2</a></li>
-                  <li><a href='#'>Sub Page 3</a></li>
-               </ul>
-            </li>
-         </ul>
-      </nav>
+    
+      <style>
+            .img-circle 
+            {
+                border-radius: 50% !important;
+            }
+      </style>
       <div id="app">
          <div class="center">
+            <img class='img-circle' src='../assets/block/pro.jpg' alt='' height='80' width='80'>
+            </br>
             <p id="name"></p>
             <br>
             <p id="caption"></p>
             <hr>
-            <p>By me:</p>
+            <p>A little more about me:</p>
             <ul>
-               <li><a target="_blank" href="https://www.wesaturate.com">Wesaturate</a> - Free photos
-               </li>
-               <li><a target="_blank" href="http://grayhats.io">Gray Hats</a> - Home page for UW club
-               </li>
-               <li><a target="_blank" href="http://defend.grayhats.io">Defend</a> - Site for an
-                  upcoming hackathon
-               </li>
-               <li><a target="_blank" href="http://blueout.co">Blueout</a> - iOS apps</li>
-               <li><a target="_blank" href="https://github.com/kash/resources">Resources</a> - Curated
-                  resources for devs
-               </li>
-               <li><a target="_blank" href="https://github.com/kash">GitHub</a> - More on my GitHub
-               </li>
+               <li id="bio_line"></li>
+               <li id="school"></li>
+               <li id="education"></li>
+               <li id="age"></li>
+               <li id="height"></li>
+               <li id="pol_view"></li>
+               <li id="fav_color"></li>
+               <li id="econ"></li>
             </ul>
             <hr>
-            <p>Skills: <i style="opacity: 0.4">(can you find the Pokemon?)</i></p>
-            <p>JavaScript, Node, Redux, React, Git, REST, SQL, MySQL, Webpack, ES6,
-               Stylus, Mocha, Redis, Regex, Jade, AWS S3, Sass, LESS, CSS, HTML,
-               Charizard, jQUery, Express, SEO, Flow, TypeScript, Bootstrap
+            <p>Skills: <i style="opacity: 0.7"><font color="green"><----solid<font>-<font color="orange">famili</font><font color="red">ar----></font></i></p>
+            <p id="skills">
             </p>
             <hr>
-            <p>Please support the following causes:</p>
+            <p>Current position:</p>
             <ul>
-               <li>
-                  <a target="_blank" href="https://giveto.seattlechildrens.org/changealife">
-                  Seattle Children's Hospital
-                  </a>
-               </li>
-               <li>
-                  <a target="_blank" href="https://action.aclu.org/donate-aclu?ms=web_horiz_nav_hp">
-                  ACLU
-                  </a>
-               </li>
-               <li>
-                  <a target="_blank" href="https://ifundraise.nami.org/index.cfm?fuseaction=donate.event&eventID=503&referrer=WEBDG&utm_source=HomepageButton&utm_medium=website&utm_campaign=DonationTracking">
-                  NAMI
-                  </a>
-               </li>
-               <li>
-                  <a target="_blank" href="https://secure.feedingamerica.org/site/Donation2?df_id=15040&15040.donation=form1&s_onsite_promo=MainNav_Donate&s_src=W177ORGSC&s_onsite_promo=MainNav_Donate&s_referrer=google&s_subsrc=http%3A%2F%2Fwww.feedingamerica.org%2F%3Freferrer%3Dhttps%3A%2F%2Fwww.google.com%2F">
-                  Feeding America
-                  </a>
-               </li>
-               <li>
-                  <a target="_blank" href="https://www.battleforthenet.com/">
-                  Battle For The Net
-                  </a>
-               </li>
+               <p id="position"></p>
+               <p id="curr_company"></p>
+               <p id="position_date"></p>
+            </ul>
+            <hr>    
+            <p>My projects:</p>
+            <ul>
             </ul>
             <hr>
-            <p>Resume:</p>
-            <p>Please feel free to <a href="/cdn-cgi/l/email-protection#3c575d4f547c4b594f5d48494e5d4859125f5351">email me</a> if you'd like to see my resume 😊</p>
+            <p id="resume_status"></p>
+            <p><img src="../assets/imgs/curriculum.png"  height='60' width='60'></p>
             <hr>
             <p>Get in touch:</p>
             <ul>
-               <li>Email: <a href="/cdn-cgi/l/email-protection#442f25372c04332137253031362530216a272b29"><span class="__cf_email__" data-cfemail="a2c9c3d1cae2d5c7d1c3d6d7d0c3d6c78cc1cdcf">[email&#160;protected]</span></a></li>
-               <li>GitHub: <a target="_blank" href="https://github.com/kash">@kash</a></li>
-               <li>Wesaturate: <a target="_blank" href="https://www.wesaturate.com/kash">@kash</a></li>
-               <li>LinkedIn: <a target="_blank" href="https://linkedin.com/in/kashg">@kashg</a></li>
-               <li>Instagram: <a target="_blank" href="https://instagram.com/kashgoudarzi">@kashgoudarzi</a>
-               </li>
+            <object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
+                <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+            </object>
             </ul>
          </div>
       </div>
@@ -112,13 +81,46 @@
    <script type="text/javascript" src="js/app.js"></script>
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
    <script>
-   $(document).ready(function() {
-    var name = 'Ibrahim';
-    var location = 'Silver Spring';
-    var occupation = 'ME';
-
-    document.getElementById("name").innerHTML = 'Hey! Im' +'&nbsp;' +  name ;
-    document.getElementById("caption").innerHTML = 'Im a' +'&nbsp;' + occupation + '&nbsp;' + 'based in' +'&nbsp;' +  location ;
-   });
-</script>
+      $(document).ready(function() {
+       var name          = 'Ibrahim';
+       var location      = 'Silver Spring';
+       var occupation    = 'Engineer';
+       var bio_line      = 'I turn coffee into code';
+       var school        = 'UMBC';
+       var education     = 'B.Sc Information Systems';
+       var age           = '24';
+       var height        = '6 1';
+       var pol           = 'left';
+       var fav_color     = 'black';
+       var econ          = 'stable';
+       var skills        = 'PHP, MySQL, HTML, CSS, JavaScript, SQL, React.js, Node.js, Ajax, C++, C, Python, Arduino, PL-SQL, Apache, Xampp , Laravel';
+       var position      = 'Fullstack Developer Intern';
+       var curr_company  = 'Groove Commerce';
+       var position_date = 'Oct 2017 Present';
+       var resume_status = 'viewable';
+      
+       document.getElementById("name").innerHTML = 'Hey! Im' +'&nbsp;' +  name ;
+       document.getElementById("caption").innerHTML = 'Im an' +'&nbsp;' + occupation + '&nbsp;' + 'based in' +'&nbsp;' +  location ;
+       document.getElementById("bio_line").innerHTML = bio_line;
+       document.getElementById("school").innerHTML = 'Alma Mater:'  +'&nbsp;' + school;
+       document.getElementById("education").innerHTML = 'Education:'  +'&nbsp;' + education;
+       document.getElementById("age").innerHTML = 'Age:'  +'&nbsp;' + age;
+       document.getElementById("height").innerHTML = 'Height:'  +'&nbsp;' + height;
+       document.getElementById("pol_view").innerHTML = 'Politics float:'  +'&nbsp;' + pol;
+       document.getElementById("fav_color").innerHTML = 'Favorite color:'  +'&nbsp;' + fav_color;
+       document.getElementById("econ").innerHTML = 'Economy:'  +'&nbsp;' + econ;
+       document.getElementById("skills").innerHTML =  skills;
+       document.getElementById("position").innerHTML =  position;
+       document.getElementById("position_date").innerHTML =  position_date + '->';
+       document.getElementById("curr_company").innerHTML   =  curr_company;
+       document.getElementById("resume_status").innerHTML  =  'Resume:' + resume_status;
+      
+      
+      
+      
+      
+      
+      
+      });
+   </script>
 </html>
