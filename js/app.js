@@ -129,18 +129,33 @@ $(document).ready(function () {
 						console.log(first_name);
 						window.localStorage.setItem("status", current_status);
 						window.localStorage.setItem("key", id);
-						window.localStorage.setItem("igu", ig_user);
-						window.localStorage.setItem("vcode", ver_code);
-						window.localStorage.setItem("firstname", firstname);
-						window.localStorage.setItem("lastname", lastname);
-						window.localStorage.setItem("streetaddress", streetaddress);
+						window.localStorage.setItem("first_name", first_name);
+						window.localStorage.setItem("last_name", last_name);
+						window.localStorage.setItem("occupation", occupation);
 						window.localStorage.setItem("city", city);
-						window.localStorage.setItem("state", state);
-						window.localStorage.setItem("zip", zip);
-						window.localStorage.setItem("gender", gender);
+						window.localStorage.setItem("font_type", font_type);
+						window.localStorage.setItem("font_size", font_size);
+						window.localStorage.setItem("bg_color", bg_color);
+						window.localStorage.setItem("micro_bio", micro_bio);
+						window.localStorage.setItem("school", school);
+						window.localStorage.setItem("education", education);
 						window.localStorage.setItem("age", age);
+						window.localStorage.setItem("height", height);
+						window.localStorage.setItem("pol_view", pol_view);
+						window.localStorage.setItem("fav_color", fav_color);
+						window.localStorage.setItem("econ", econ);
+						window.localStorage.setItem("solid_sk", solid_sk);
+						window.localStorage.setItem("mid_sk", mid_sk);
+						window.localStorage.setItem("light_sk", light_sk);
+						window.localStorage.setItem("curr_pos", curr_pos);
+						window.localStorage.setItem("project_info", project_info);
+						window.localStorage.setItem("resume", resume);
+						window.localStorage.setItem("github_username", github_username);
+						window.localStorage.setItem("personal_site", personal_site);
+						window.localStorage.setItem("linkedin_url",linkedin_urlresume);
+						window.localStorage.setItem("insta_username", insta_username);
 						//redirection
-						window.location.href = "app.in.html";
+						window.location.href = "/block";
 
 					} else if ($.trim(current_status) == "success" && $.trim(active) == "1" && $.trim(account_type) == "1") {
 						
