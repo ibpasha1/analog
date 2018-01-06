@@ -1,6 +1,12 @@
 <!--
    Copyright (c) Cosyne LLC 2017 - 2018 - Author Ibrahim Pasha
+
+   <object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
+                <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
+            </object>
    -->
+
+   
    <!DOCTYPE html>
 <html>
    <head>

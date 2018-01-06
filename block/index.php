@@ -33,7 +33,7 @@
       </style>
       <div id="app">
          <div class="center">
-            <img class='img-circle' src='../assets/block/pro.jpg' alt='' height='80' width='80'>
+            <img class='img-circle' src='../assets/block/b1.jpg' alt='' height='80' width='80'>
             </br>
             <p id="name"></p>
             <br>
@@ -55,6 +55,11 @@
             <p id="skills">
             </p>
             <hr>
+            <p>Connections:</p>
+            <p id="connections">
+            <hr>
+
+
             <p>Current position:</p>
             <ul>
                <p id="position"></p>
@@ -71,9 +76,11 @@
             <hr>
             <p>Get in touch:</p>
             <ul>
-            <object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
-                <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
-            </object>
+                <li>Github:</li>
+                <li>Personal site:</li>
+                <li>LinkedIn:</li>
+                <li>Instagram:</li>
+            
             </ul>
          </div>
       </div>
@@ -98,6 +105,7 @@
        var curr_company  = 'Groove Commerce';
        var position_date = 'Oct 2017 Present';
        var resume_status = 'viewable';
+       var connections   = 'Richard Rice, Kash G, Beruk A';
       
        document.getElementById("name").innerHTML = 'Hey! Im' +'&nbsp;' +  name ;
        document.getElementById("caption").innerHTML = 'Im an' +'&nbsp;' + occupation + '&nbsp;' + 'based in' +'&nbsp;' +  location ;
@@ -114,6 +122,7 @@
        document.getElementById("position_date").innerHTML =  position_date + '->';
        document.getElementById("curr_company").innerHTML   =  curr_company;
        document.getElementById("resume_status").innerHTML  =  'Resume:' + resume_status;
+       document.getElementById("connections").innerHTML  =  connections;
       
       
       

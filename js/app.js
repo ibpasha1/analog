@@ -5,7 +5,7 @@ app general javascript functions
 $(document).ready(function () {
 
 	//var url="http://localhost/cosyne_backend/cosyne_backend/app.php?callback=?";
-	var url = "http://www.cosyne.io/y/app.php?callback=?";
+	var url = "http://www.cosyne.io/log/app.php?callback=?";
 
 	$("#signup").click(function () {
 		var email = $("#email_signup").val();
@@ -63,43 +63,70 @@ $(document).ready(function () {
 					var id = obj.id;
 					var active = obj.active;
 					var account_type = obj.account_type;
-					var ig_user = obj.insta_username;
-					var ver_code = obj.verification_code;
-					var firstname = obj.first_name;
-					var lastname = obj.last_name;
-					var streetaddress = obj.street_address;
-					var city = obj.city;
-					var state = obj.state;
-					var zip = obj.zip;
-					var gender = obj.gender;
+					var block_pic = obj.block_pic;
+					var first_name = obj.first_name;
+					var last_name = obj.last_name;
+					var occupation = obj.occupation;
+					var city 	  = obj.city;
+					var font_type = obj.font_type;
+					var font_size = obj.font_size;
+					var bg_color = obj.bg_color;
+					var micro_bio = obj.micro_bio;
+					var school    = obj.school;
+					var education = obj.education;
+					var age 	  = obj.age;
+					var height 	  = obj.height;
+					var pol_view  = obj.pol_view;
+					var fav_color = obj.fav_color;
+					var econ 	  = obj.econ;
+					var solid_sk  = obj.solid_sk;
+					var mid_sk    = obj.mid_sk;
+					var light_sk  = obj.light_sk;
+					var curr_pos  = obj.curr_pos;
+					var project_info = obj.project_info;
+					var resume    = obj.resume;
+					var github_username = obj.github_username;
+					var personal_site = obj.personal_site;
+					var linkedin_url = obj.linkedin_url;
+					var insta_username = obj.insta_username;
 					var booler = 'your account is not activated';
-					var age = obj.age;
-					//----------Business elements-----------//
-					var position = obj.position;
-					var business_type = obj.business_type;
-					var business_name = obj.business_name;
+				
 
 
 					if ($.trim(current_status) == "success" && $.trim(active) == "1" && $.trim(account_type) == "0") {
 						$('#key').html(id);
-						$('#igu').html(ig_user);
-						$('#vcode').html(ver_code);
+						$('#first_name').html(first_name);
+						$('#last_name').html(last_name);
 						$('#firstname').html(firstname);
-						$('#lastname').html(lastname);
-						$('#streetaddress').html(streetaddress);
+						$('#occupation').html(occupation);
 						$('#city').html(city);
-						$('#state').html(state);
-						$('#zip').html(zip);
-						$('#gender').html(gender);
-						$('#active').html(active);
+						$('#font_type').html(font_type);
+						$('#font_size').html(font_size);
+						$('#bg_color').html(bg_color);
+						$('#micro_bio').html(micro_bio);
+						$('#school').html(school);
+						$('#education').html(education);
 						$('#age').html(age);
-						//----------Business elements-----------//
-						$('#position').html(position);
-						$('#business_type').html(business_type);
-						$('#business_name').html(business_name);
+						$('#height').html(height);
+						$('#pol_view').html(pol_view);
+						$('#fav_color').html(fav_color);
+						$('#econ').html(econ);
+						$('#solid_sk').html(solid_sk);
+						$('#mid_sk').html(mid_sk);
+						$('#light_sk').html(light_sk);
+						$('#curr_pos').html(curr_pos);
+						$('#project_info').html(project_info);
+						$('#resume').html(resume);
+						$('#github_username').html(github_username);
+						$('#personal_site').html(personal_site);
+						$('#linkedin_url').html(linkedin_url);
+						$('#insta_username').html(insta_username);
+						
+						
+
 
 						console.log(id);
-						console.log(ig_user);
+						console.log(first_name);
 						window.localStorage.setItem("status", current_status);
 						window.localStorage.setItem("key", id);
 						window.localStorage.setItem("igu", ig_user);
@@ -116,37 +143,10 @@ $(document).ready(function () {
 						window.location.href = "app.in.html";
 
 					} else if ($.trim(current_status) == "success" && $.trim(active) == "1" && $.trim(account_type) == "1") {
-						$('#key').html(id);
-						$('#igu').html(ig_user);
-						$('#vcode').html(ver_code);
-						$('#firstname').html(firstname);
-						$('#lastname').html(lastname);
-						$('#streetaddress').html(streetaddress);
-						$('#city').html(city);
-						$('#state').html(state);
-						$('#zip').html(zip);
-						$('#gender').html(gender);
-						$('#active').html(active);
-						console.log(id);
-						console.log(ig_user);
-						window.localStorage.setItem("status", current_status);
-						window.localStorage.setItem("key", id);
-						window.localStorage.setItem("igu", ig_user);
-						window.localStorage.setItem("vcode", ver_code);
-						window.localStorage.setItem("firstname", firstname);
-						window.localStorage.setItem("lastname", lastname);
-						window.localStorage.setItem("streetaddress", streetaddress);
-						window.localStorage.setItem("city", city);
-						window.localStorage.setItem("state", state);
-						window.localStorage.setItem("zip", zip);
-						window.localStorage.setItem("gender", gender);
-						window.localStorage.setItem("age", age);
-						//----------Business elements-----------//
-						window.localStorage.setItem("position", position);
-						window.localStorage.setItem("business_type", business_type);
-						window.localStorage.setItem("business_name", business_name);
-						//redirection
-						window.location.href = "app.bs.html";
+						
+
+					//there is no other account types..........yet
+
 					} else if ($.trim(current_status) == "mismatch") {
 						window.location.href = "login.html";
 						$('#status').html('wrong password or email');
