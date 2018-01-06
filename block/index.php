@@ -33,6 +33,8 @@
       </style>
 
 <script text="text/javascript">
+      //document.body.style.backgroundColor = "red";
+       
       var secret_key         = window.localStorage.getItem('key');
       var login_status       = window.localStorage.getItem('status');
       var first_name         = window.localStorage.getItem('first_name');
@@ -60,7 +62,7 @@
       var personal_site      = window.localStorage.getItem('personal_site');
       var linkedin_url       = window.localStorage.getItem('linkedin_url');
       var insta_username     = window.localStorage.getItem('insta_username');
-
+      document.body.style.backgroundColor = bg_color;
 
       console.log(insta_username);
       console.log(secret_key);
