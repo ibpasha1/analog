@@ -35,12 +35,12 @@
          <form id='login-form'>
             <div class="row">
                <div class="input-field col s12">
-                  <input id="email_login" type="email" class="validate" name="email_login" placeholder="email" required>
+                  <input id="email_login" type="email" class="validate"  placeholder="email" required>
                </div>
             </div>
             <div class="row">
                <div class="input-field col s12">
-                  <input id="password_login" type="password" class="validate" name="password_login"  placeholder="password" required>
+                  <input id="password_login" type="password" class="validate"   placeholder="password" required>
                </div>
             </div>
             <div class="row">
@@ -55,12 +55,12 @@
          <form id='register-form'>
             <div class="row">
                <div class="input-field col s12">
-                  <input id="email_signup" type="email" class="validate" name="email_signup" placeholder="email" required>
+                  <input id="email_signup" type="email" class="validate"  placeholder="email" required>
                </div>
             </div>
             <div class="row">
                <div class="input-field col s12">
-                  <input id="password_signup" type="password" class="validate" name="password_signup"  placeholder="password" required>
+                  <input id="password_signup" type="password" class="validate"   placeholder="password" required>
                </div>
             </div>
             <div class="row">

@@ -44,8 +44,10 @@ $(document).ready(function () {
 
 
 	$("#login").click(function () {
-		var email = $("#email_login").val();
-		var password = $("#password_login").val();
+		var email      = $("#email_login").val();
+		var password   = $("#password_login").val();
+		console.log(email);
+		console.log(password);
 		var dataString = "email=" + email + "&password=" + password + "&login=";
 		if ($.trim(email).length > 0 & $.trim(password).length > 0) {
 			$.ajax({
@@ -59,45 +61,45 @@ $(document).ready(function () {
 				},
 				success: function (data) {
 					var obj = JSON.parse(data);
-					var current_status = obj.status;
-					var id = obj.id;
-					var active = obj.active;
-					var account_type = obj.account_type;
-					var block_pic = obj.block_pic;
-					var first_name = obj.first_name;
-					var last_name = obj.last_name;
-					var occupation = obj.occupation;
-					var city 	  = obj.city;
-					var font_type = obj.font_type;
-					var font_size = obj.font_size;
-					var bg_color = obj.bg_color;
-					var micro_bio = obj.micro_bio;
-					var school    = obj.school;
-					var education = obj.education;
-					var age 	  = obj.age;
-					var height 	  = obj.height;
-					var pol_view  = obj.pol_view;
-					var fav_color = obj.fav_color;
-					var econ 	  = obj.econ;
-					var solid_sk  = obj.solid_sk;
-					var mid_sk    = obj.mid_sk;
-					var light_sk  = obj.light_sk;
-					var curr_pos  = obj.curr_pos;
-					var project_info = obj.project_info;
-					var resume    = obj.resume;
-					var github_username = obj.github_username;
-					var personal_site = obj.personal_site;
-					var linkedin_url = obj.linkedin_url;
-					var insta_username = obj.insta_username;
+					var current_status     = obj.status;
+					var id                 = obj.id;
+					var active             = obj.active;
+					var account_type       = obj.account_type;
+					var block_pic          = obj.block_pic;
+					var first_name         = obj.first_name;
+					var last_name          = obj.last_name;
+					var occupation         = obj.occupation;
+					var city 	             = obj.city;
+					var font_type          = obj.font_type;
+					var font_size          = obj.font_size;
+					var bg_color           = obj.bg_color;
+					var micro_bio          = obj.micro_bio;
+					var school             = obj.school;
+					var education          = obj.education;
+					var age 	             = obj.age;
+					var height 	           = obj.height;
+					var pol_view           = obj.pol_view;
+					var fav_color          = obj.fav_color;
+					var econ 	             = obj.econ;
+					var solid_sk           = obj.solid_sk;
+					var mid_sk             = obj.mid_sk;
+					var light_sk 		       = obj.light_sk;
+					var curr_pos           = obj.curr_pos;
+					var project_info       = obj.project_info;
+					var resume             = obj.resume;
+					var github_username    = obj.github_username;
+					var personal_site      = obj.personal_site;
+					var linkedin_url       = obj.linkedin_url;
+					var insta_username     = obj.insta_username;
 					var booler = 'your account is not activated';
-				
+					console.log(data);
+
 
 
 					if ($.trim(current_status) == "success" && $.trim(active) == "1" && $.trim(account_type) == "0") {
 						$('#key').html(id);
 						$('#first_name').html(first_name);
 						$('#last_name').html(last_name);
-						$('#firstname').html(firstname);
 						$('#occupation').html(occupation);
 						$('#city').html(city);
 						$('#font_type').html(font_type);
@@ -121,8 +123,8 @@ $(document).ready(function () {
 						$('#personal_site').html(personal_site);
 						$('#linkedin_url').html(linkedin_url);
 						$('#insta_username').html(insta_username);
-						
-						
+
+
 
 
 						console.log(id);
@@ -152,13 +154,13 @@ $(document).ready(function () {
 						window.localStorage.setItem("resume", resume);
 						window.localStorage.setItem("github_username", github_username);
 						window.localStorage.setItem("personal_site", personal_site);
-						window.localStorage.setItem("linkedin_url",linkedin_urlresume);
+						window.localStorage.setItem("linkedin_url",linkedin_url);
 						window.localStorage.setItem("insta_username", insta_username);
 						//redirection
-						window.location.href = "/block";
+						window.location.href = "../block/";
 
 					} else if ($.trim(current_status) == "success" && $.trim(active) == "1" && $.trim(account_type) == "1") {
-						
+
 
 					//there is no other account types..........yet
 
@@ -206,7 +208,7 @@ $(document).ready(function () {
 		var linkedin_url       = $("#linkedin_url").val();
 		var insta_username     = $("#insta_username").val();
 
-		
+
 
 
 

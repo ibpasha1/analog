@@ -68,6 +68,7 @@
       console.log(secret_key);
       console.log(login_status);
       console.log(occupation);
+      console.log(bg_color);
   
 
       if (login_status == "success") {
