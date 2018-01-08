@@ -177,17 +177,43 @@ $(document).ready(function () {
 	});
 
 
-	$("#update_account_in").click(function () {
-		var id = $("#id").val();
-		var insta_username = $("#insta_username").val();
-		var verification_code = $("#verification_code").val();
-		var first_name = $("#first_name").val();
-		var last_name = $("#last_name").val();
-		var street_address = $("#street_address").val();
-		var city = $("#city").val();
-		var state = $("#state").val();
-		var zip = $("#zip").val();
-		var gender = $("#gender").val();
+	$("#update_account").click(function () {
+		var id 		       = $("#id").val();
+		var block_pic      = $("#block_pic").val();
+		var first_name     = $("#first_name").val();
+		var last_name      = $("#last_name").val();
+		var ocupation      = $("#ocupation").val();
+		var city 	       = $("#city").val();
+		var font_type      = $("#font_type").val();
+		var font_size      = $("#font_size").val();
+		var bg_color       = $("#bg_color").val();
+		var micro_bio      = $("#micro_bio").val();
+		var school         = $("#school").val();
+		var eduation       = $("#eduation").val();
+		var Age            = $("#Age").val();
+		var Height         = $("#Height").val();
+		var pol_view       = $("#pol_view").val();
+		var fav_color      = $("#fav_color").val();
+		var econ           = $("#econ").val();
+		var solid_sk       = $("#solid_sk").val();
+		var mid_sk         = $("#mid_sk").val();
+		var light_sk       = $("#light_sk").val();
+		var curr_pos   	   = $("#curr_pos").val();
+		var project_info   = $("#project_info").val();
+		var resume        	   = $("#resume").val();
+		var github_username    = $("#github_username").val();
+		var personal_site      = $("#personal_site").val();
+		var linkedin_url       = $("#linkedin_url").val();
+		var insta_username     = $("#insta_username").val();
+
+		
+
+
+
+
+
+
+
 		var dataString = 'id=' + id + '&insta_username=' + insta_username + '&verification_code=' + verification_code + '&first_name=' + first_name +
 			'&last_name=' + last_name + '&street_address=' + street_address + '&city=' + city + '&state=' + state + '&zip=' + zip + '&gender=' + gender + "&update_account_in=";
 		if ($.trim(id).length > 0 & $.trim(first_name).length > 0 & $.trim(insta_username).length > 0) {
@@ -198,7 +224,7 @@ $(document).ready(function () {
 				crossDomain: true,
 				cache: false,
 				beforeSend: function () {
-					$("#update_account_in").val('Connecting...');
+					$("#update_account").val('Connecting...');
 				},
 				success: function (data) {
 					var obj2 = JSON.parse(data);

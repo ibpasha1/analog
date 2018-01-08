@@ -83,7 +83,7 @@
    </script>
       <div id="app">
          <div class="center">
-            <img class='img-circle' src='../assets/block/b1.jpg' alt='' height='80' width='80'>
+            <img class='img-circle' id='block_image' alt='' height='80' width='80'>
             </br>
             <p id="name"></p>
             <br>
@@ -174,6 +174,8 @@
        document.getElementById("resume_status").innerHTML  =  'Resume:' + resume_status;
        document.getElementById("connections").innerHTML  =  connections;
       
+
+       document.getElementById('block_image').src = "../assets/block/b1.jpg";
       
       
       

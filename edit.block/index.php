@@ -67,6 +67,8 @@
          .text-right{
             text-align: right !important; ;
         }
+
+        
       </style>
 
 <script text="text/javascript">
@@ -119,16 +121,17 @@
       <div id="app">
          <div class="center">
             <ul>
-               <input type="file" name="fileToUpload" id="fileToUpload">
+               <input id="id" name="id" type="hidden">
+               <input type="file" name="fileToUpload" id="block_pic">
                <br>
-               <input type="submit" value="Upload Image" name="submit">
-               <li><input type="text" name="first_name" value="" placeholder="first name"/></li>
-               <li><input type="text" name="last_name"  value="" placeholder="last name"/></li>
-               <li><input type="text" name="ocupation"  value="" placeholder="ocupation"/></li>
-               <li><input type="text" name="city"       value="" placeholder="city"/></li>
+               <input type="submit" value="upload selfie" name="submit" id="upload_blockpic">
+               <li><input type="text" id="first_name" name="first_name" value="" placeholder="first name"/></li>
+               <li><input type="text" id="last_name"  name="last_name"  value="" placeholder="last name"/></li>
+               <li><input type="text" id="ocupation"  name="ocupation"  value="" placeholder="ocupation"/></li>
+               <li><input type="text" id="city"       name="city"       value="" placeholder="city"/></li>
               
                   <li>Font type:
-                  <select name="font_type" class="field-select" value="">
+                  <select id="font_type" name="font_type" class="field-select" value="">
                      <option value="">Saved</option>
                      <option value="0">Source Sans Pro</option>
                      <option value="1">Courier New</option>
@@ -146,7 +149,7 @@
                <li>
                   Font size:
                   <div id="slidecontainer">
-                     <input type="range" min="1" max="4" name="font_size" value="" class="slider" id="myRange">
+                     <input type="range" min="1" max="4" id="font_size" name="font_size" value="" class="slider" id="myRange">
                      <p>Size: <span id="demo"></span></p>
                   </div>
                </li>
@@ -159,10 +162,9 @@
                   output.innerHTML = this.value;
                   }
                </script>
-               <li><input type="text" name="micro_bio" value="" placeholder="A line about myself"/></li>
                <li>
                   background-color:
-                  <select name="bgcolor" class="field-select" value="">
+                  <select id="bgcolor" name="bgcolor" class="field-select" value="">
                      <option value="">Saved</option>
                      <option value="0">gray</option>
                      <option value="1">white</option>
@@ -180,46 +182,50 @@
             <hr>
             <p>A little more about me:</p>
             <ul>
-               <li><input type="text" name="micro_bio"  value="" placeholder="One line bio"/></li>
-               <li><input type="text" name="school"     value="" placeholder="Alma Mater"/></li>
-               <li><input type="text" name="eduation"   value="" placeholder="Education"/></li>
-               <li><input type="text" name="Age"        value="" placeholder="Age"/></li>
-               <li><input type="text" name="Height"     value="" placeholder="Height"/></li>
-               <li><input type="text" name="pol_view"   value="" placeholder="Politics"/></li>
-               <li><input type="text" name="fav_color"  value="" placeholder="Favorite color"/></li>
-               <li><input type="text" name="econ"       value="" placeholder="Economy"/></li>
+               <li><input type="text" id="micro_bio"  value="" placeholder="One line bio"/></li>
+               <li><input type="text" id="school"     value="" placeholder="Alma Mater"/></li>
+               <li><input type="text" id="eduation"   value="" placeholder="Education"/></li>
+               <li><input type="text" id="Age"        value="" placeholder="Age"/></li>
+               <li><input type="text" id="Height"     value="" placeholder="Height"/></li>
+               <li><input type="text" id="pol_view"   value="" placeholder="Politics"/></li>
+               <li><input type="text" id="fav_color"  value="" placeholder="Favorite color"/></li>
+               <li><input type="text" id="econ"       value="" placeholder="Economy"/></li>
 
               
             </ul>
             <hr>
             <p>Skills: (plot your skills from most solid to least solid) </p>
             <p><i style="opacity: 0.7">example:<font color="green">PHP, HTML, CSS, MySql, Json</font>, <font color="orange">JavaScript,</font> <font color="red">React.js, Node.js, Python</font></i></p>
-                 <textarea rows='2' cols='40' name="skills">solid...</textarea>
-                 <textarea rows='2' cols='40' name="skills">decent...</textarea>
-                 <textarea rows='2' cols='40' name="skills">working on...</textarea>
+                 <textarea placeholder="solid..."      rows='2' cols='40' id="solid_sk"></textarea>
+                 <textarea placeholder="decent..."     rows='2' cols='40' id="mid_sk"></textarea>
+                 <textarea placeholder="working on..." rows='2' cols='40' id="light_sk"></textarea>
             </p>
             <hr>
             <p>Current position or last: <i style="opacity: 0.7">example: FullStack Developer at Analogg.io</i></p>
             <ul>
-             <li>Position:<input type="text" name="name" value=""/></li>
+             <li><input type="text" id="curr_pos" value=""placeholder="current position"/></li>
             </ul>
             <hr>
             <p>My projects:</p>
             <ul>
+                <li><input type="text" id="project_info"  value="" placeholder="project info"/></li>
             </ul>
             <hr>
             <p>Resume:</p>
             <p id="resume_status"></p>
-            <p><img src="../assets/imgs/curriculum.png"  height='60' width='60'></p>
+            <input type="file" name="fileToUpload" id="resume">
+               <br>
+            <input type="submit" value="upload resume" name="submit" id="upload_resume">
             <hr>
             <p>Get in touch:</p>
             <ul>
-               <object data="myfile.pdf" type="application/pdf" width="100%" height="100%">
-                  <p>Alternative text - include a link <a href="myfile.pdf">to the PDF!</a></p>
-               </object>
+                <li><input type="text" id="github_username"   value="" placeholder="Github"/></li>
+                <li><input type="text" id="personal_site"     value="" placeholder="Personal site"/></li>
+                <li><input type="text" id="linkedin_url"      value="" placeholder="LinkedIn"/></li>
+                <li><input type="text" id="insta_username"    value="" placeholder="Instagram"/></li>
             </ul>
             <p class="center-align">
-                     <center><button class="button_signup button1" id="save"><font color="black">save</font></button></center>
+                     <center><button class="button_signup button1" id="update_account"><font color="black">save</font></button></center>
                   </p>
          </div>
       </div>
