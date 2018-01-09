@@ -207,12 +207,12 @@ $(document).ready(function () {
 		var linkedin_url       = $("#linkedin_url").val();
 		var insta_username     = $("#insta_username").val();
 
-		var dataString = 'id=' + id + '&block_pic=' + block_pic + '&first_name=' + first_name + '&last_name=' + last_name +
+		var dataString = 'id=' + id +  '&first_name=' + first_name + '&last_name=' + last_name +
 			'&occupation=' + occupation + '&city=' + city + '&font_type=' + font_type + '&font_size=' + font_size + '&bg_color=' + bg_color + '&micro_bio=' + micro_bio + 
 			'&school=' + school + '&education=' + eduation + '&age=' + age + '&height=' + height + '&pol_view=' + pol_view + '&fav_color=' + fav_color + 
 			'&econ=' + econ + '&solid_sk=' + solid_sk + '&mid_sk=' + mid_sk + '&light_sk=' + light_sk + '&curr_pos=' + curr_pos + '&project_info=' + project_info + 
 			'&resume=' + resume + '&github_username=' + github_username + '&personal_site=' + personal_site + '&linkedin_url=' + linkedin_url + '&insta_username=' + insta_username +"&update_account=";
-		if ($.trim(id).length > 0 & $.trim(first_name).length > 0 & $.trim(insta_username).length > 0) {
+		if ($.trim(id).length > 0 ) {
 			$.ajax({
 				type: "POST",
 				url: url,

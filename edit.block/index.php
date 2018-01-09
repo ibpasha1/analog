@@ -73,7 +73,7 @@
       </style>
 <script type="text/javascript"></script>
 <script text="text/javascript">
-      var user_idx           = window.localStorage.getItem('key');
+      var user_id            = window.localStorage.getItem('key');
       var login_status       = window.localStorage.getItem('status');
       var first_name         = window.localStorage.getItem('first_name');
       var last_name          = window.localStorage.getItem('last_name');
@@ -103,7 +103,7 @@
       document.body.style.backgroundColor = bg_color;
 
 
-      console.log(user_idx);
+      console.log(user_id);
      
       
   
@@ -121,7 +121,7 @@
          <div class="center">
             <ul>
                <br>
-               <input type="hidden" id="xid">
+               <input type="hidden" id="id">
                <li><input placeholder="" id="first_name" type="text" class="validate"></li>
                <li><input placeholder="" id="last_name"  type="text" class="validate"></li>
                <li><input placeholder="" id="ocupation"  type="text" class="validate"></li>
@@ -228,7 +228,7 @@
    <script type="text/javascript" src="../js/app.js"></script>
    <script>
       $(document).ready(function() {
-        document.getElementById("xid").value                = user_idx;
+        document.getElementById("id").value                 = user_id;
         document.getElementById("first_name").value         = first_name;
         document.getElementById("last_name").value          = last_name;
       
