@@ -26,9 +26,9 @@ $(document).ready(function () {
 					var obj = JSON.parse(data);
 					var current_status = obj.status;
 					if ($.trim(current_status) == "success") {
-						window.location.href = "../pending";
+						//window.location.href = "../pending";
 					} else {
-						$('#key').html(data);
+						//$('#key').html(data);
 						$('#status').html(data);
 					}
 
@@ -38,9 +38,9 @@ $(document).ready(function () {
 		return false;
 	});
 
-	window.onload = function () {
-		document.addEventListener("deviceready", init, false);
-	}
+	//window.onload = function () {
+		//document.addEventListener("deviceready", init, false);
+	//}
 
 
 	$("#login").click(function () {
@@ -69,21 +69,21 @@ $(document).ready(function () {
 					var first_name         = obj.first_name;
 					var last_name          = obj.last_name;
 					var occupation         = obj.occupation;
-					var city 	             = obj.city;
+					var city 	           = obj.city;
 					var font_type          = obj.font_type;
 					var font_size          = obj.font_size;
 					var bg_color           = obj.bg_color;
 					var micro_bio          = obj.micro_bio;
 					var school             = obj.school;
 					var education          = obj.education;
-					var age 	             = obj.age;
+					var age 	           = obj.age;
 					var height 	           = obj.height;
 					var pol_view           = obj.pol_view;
 					var fav_color          = obj.fav_color;
-					var econ 	             = obj.econ;
+					var econ 	           = obj.econ;
 					var solid_sk           = obj.solid_sk;
 					var mid_sk             = obj.mid_sk;
-					var light_sk 		       = obj.light_sk;
+					var light_sk 		   = obj.light_sk;
 					var curr_pos           = obj.curr_pos;
 					var project_info       = obj.project_info;
 					var resume             = obj.resume;
@@ -180,44 +180,38 @@ $(document).ready(function () {
 
 
 	$("#update_account").click(function () {
-		var id 		       = $("#id").val();
-		var block_pic      = $("#block_pic").val();
-		var first_name     = $("#first_name").val();
-		var last_name      = $("#last_name").val();
-		var ocupation      = $("#ocupation").val();
-		var city 	       = $("#city").val();
-		var font_type      = $("#font_type").val();
-		var font_size      = $("#font_size").val();
-		var bg_color       = $("#bg_color").val();
-		var micro_bio      = $("#micro_bio").val();
-		var school         = $("#school").val();
-		var eduation       = $("#eduation").val();
-		var Age            = $("#Age").val();
-		var Height         = $("#Height").val();
-		var pol_view       = $("#pol_view").val();
-		var fav_color      = $("#fav_color").val();
-		var econ           = $("#econ").val();
-		var solid_sk       = $("#solid_sk").val();
-		var mid_sk         = $("#mid_sk").val();
-		var light_sk       = $("#light_sk").val();
-		var curr_pos   	   = $("#curr_pos").val();
-		var project_info   = $("#project_info").val();
+		var id 		           = $("#id").val();
+		var first_name         = $("#first_name").val();
+		var last_name          = $("#last_name").val();
+		var ocupation          = $("#ocupation").val();
+		var city 	           = $("#city").val();
+		var font_type          = $("#font_type").val();
+		var font_size          = $("#font_size").val();
+		var bg_color           = $("#bg_color").val();
+		var micro_bio          = $("#micro_bio").val();
+		var school             = $("#school").val();
+		var eduation           = $("#eduation").val();
+		var Age                = $("#Age").val();
+		var Height             = $("#Height").val();
+		var pol_view           = $("#pol_view").val();
+		var fav_color          = $("#fav_color").val();
+		var econ               = $("#econ").val();
+		var solid_sk           = $("#solid_sk").val();
+		var mid_sk             = $("#mid_sk").val();
+		var light_sk           = $("#light_sk").val();
+		var curr_pos   	       = $("#curr_pos").val();
+		var project_info       = $("#project_info").val();
 		var resume        	   = $("#resume").val();
 		var github_username    = $("#github_username").val();
 		var personal_site      = $("#personal_site").val();
 		var linkedin_url       = $("#linkedin_url").val();
 		var insta_username     = $("#insta_username").val();
 
-
-
-
-
-
-
-
-
-		var dataString = 'id=' + id + '&insta_username=' + insta_username + '&verification_code=' + verification_code + '&first_name=' + first_name +
-			'&last_name=' + last_name + '&street_address=' + street_address + '&city=' + city + '&state=' + state + '&zip=' + zip + '&gender=' + gender + "&update_account_in=";
+		var dataString = 'id=' + id + '&block_pic=' + block_pic + '&first_name=' + first_name + '&last_name=' + last_name +
+			'&occupation=' + occupation + '&city=' + city + '&font_type=' + font_type + '&font_size=' + font_size + '&bg_color=' + bg_color + '&micro_bio=' + micro_bio + 
+			'&school=' + school + '&education=' + eduation + '&age=' + age + '&height=' + height + '&pol_view=' + pol_view + '&fav_color=' + fav_color + 
+			'&econ=' + econ + '&solid_sk=' + solid_sk + '&mid_sk=' + mid_sk + '&light_sk=' + light_sk + '&curr_pos=' + curr_pos + '&project_info=' + project_info + 
+			'&resume=' + resume + '&github_username=' + github_username + '&personal_site=' + personal_site + '&linkedin_url=' + linkedin_url + '&insta_username=' + insta_username +"&update_account=";
 		if ($.trim(id).length > 0 & $.trim(first_name).length > 0 & $.trim(insta_username).length > 0) {
 			$.ajax({
 				type: "POST",
@@ -230,16 +224,13 @@ $(document).ready(function () {
 				},
 				success: function (data) {
 					var obj2 = JSON.parse(data);
-					var insta = obj2.insta_username;
-					var ver_code = obj2.verification_code;
-					$('#insta_var').html(insta);
-					$('#ver').html(ver_code);
-					window.localStorage.setItem("insta_var", insta);
-					window.localStorage.setItem("ver", ver_code);
+					var first_name = obj2.first_name;
+					var last_name = obj2.last_name;
+					$('#fn').html(first_name);
+					$('#ln').html(last_name);
 					if ($.trim(data) == "error") {
 						alert("push fill in all fields");
 					}
-
 				}
 			});
 		}

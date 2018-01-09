@@ -4,6 +4,7 @@
       <link rel="stylesheet" href="../css/reset.css" type="text/css">
       <link rel="stylesheet" href="../css/index.scss" type="text/css">
       <link rel="stylesheet" href="../css/nav.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <meta http-equiv="content-type" content="text/html;charset=utf-8" />
       <meta charset="UTF-8" />
       <meta name="description" content="Developer." />
@@ -70,9 +71,9 @@
 
         
       </style>
-
+<script type="text/javascript"></script>
 <script text="text/javascript">
-      var secret_key         = window.localStorage.getItem('key');
+      var user_idx           = window.localStorage.getItem('key');
       var login_status       = window.localStorage.getItem('status');
       var first_name         = window.localStorage.getItem('first_name');
       var last_name          = window.localStorage.getItem('last_name');
@@ -99,12 +100,12 @@
       var personal_site      = window.localStorage.getItem('personal_site');
       var linkedin_url       = window.localStorage.getItem('linkedin_url');
       var insta_username     = window.localStorage.getItem('insta_username');
+      document.body.style.backgroundColor = bg_color;
 
 
-      console.log(insta_username);
-      console.log(secret_key);
-      console.log(login_status);
-      console.log(occupation);
+      console.log(user_idx);
+     
+      
   
 
       if (login_status == "success") {
@@ -113,25 +114,22 @@
          window.location.href = "login.html";
       }
 
-      if ($.trim(login_status) != null ) {
-         window.location.href = "login.html";
-      }
+    
 
    </script>
       <div id="app">
          <div class="center">
             <ul>
-               <input id="id" name="id" type="hidden">
-               <input type="file" name="fileToUpload" id="block_pic">
                <br>
-               <input type="submit" value="upload selfie" name="submit" id="upload_blockpic">
-               <li><input type="text" id="first_name" name="first_name" value="" placeholder="first name"/></li>
-               <li><input type="text" id="last_name"  name="last_name"  value="" placeholder="last name"/></li>
-               <li><input type="text" id="ocupation"  name="ocupation"  value="" placeholder="ocupation"/></li>
-               <li><input type="text" id="city"       name="city"       value="" placeholder="city"/></li>
+               <input type="hidden" id="xid">
+               <li><input placeholder="" id="first_name" type="text" class="validate"></li>
+               <li><input placeholder="" id="last_name"  type="text" class="validate"></li>
+               <li><input placeholder="" id="ocupation"  type="text" class="validate"></li>
+               <li><input placeholder="" id="city"       type="text" class="validate"></li>
+      
               
                   <li>Font type:
-                  <select id="font_type" name="font_type" class="field-select" value="">
+                  <select id="font_type" class="field-select" >
                      <option value="">Saved</option>
                      <option value="0">Source Sans Pro</option>
                      <option value="1">Courier New</option>
@@ -149,7 +147,7 @@
                <li>
                   Font size:
                   <div id="slidecontainer">
-                     <input type="range" min="1" max="4" id="font_size" name="font_size" value="" class="slider" id="myRange">
+                     <input type="range" min="1" max="4" id="font_size" class="slider" id="myRange">
                      <p>Size: <span id="demo"></span></p>
                   </div>
                </li>
@@ -164,7 +162,7 @@
                </script>
                <li>
                   background-color:
-                  <select id="bgcolor" name="bgcolor" class="field-select" value="">
+                  <select id="bgcolor"  class="field-select">
                      <option value="">Saved</option>
                      <option value="0">gray</option>
                      <option value="1">white</option>
@@ -182,14 +180,14 @@
             <hr>
             <p>A little more about me:</p>
             <ul>
-               <li><input type="text" id="micro_bio"  value="" placeholder="One line bio"/></li>
-               <li><input type="text" id="school"     value="" placeholder="Alma Mater"/></li>
-               <li><input type="text" id="eduation"   value="" placeholder="Education"/></li>
-               <li><input type="text" id="Age"        value="" placeholder="Age"/></li>
-               <li><input type="text" id="Height"     value="" placeholder="Height"/></li>
-               <li><input type="text" id="pol_view"   value="" placeholder="Politics"/></li>
-               <li><input type="text" id="fav_color"  value="" placeholder="Favorite color"/></li>
-               <li><input type="text" id="econ"       value="" placeholder="Economy"/></li>
+               <li><input type="text" id="micro_bio"  placeholder="One line bio"/></li>
+               <li><input type="text" id="school"     placeholder="Alma Mater"/></li>
+               <li><input type="text" id="eduation"   placeholder="Education"/></li>
+               <li><input type="text" id="Age"        placeholder="Age"/></li>
+               <li><input type="text" id="Height"     placeholder="Height"/></li>
+               <li><input type="text" id="pol_view"   placeholder="Politics"/></li>
+               <li><input type="text" id="fav_color"  placeholder="Favorite color"/></li>
+               <li><input type="text" id="econ"       placeholder="Economy"/></li>
 
               
             </ul>
@@ -203,103 +201,36 @@
             <hr>
             <p>Current position or last: <i style="opacity: 0.7">example: FullStack Developer at Analogg.io</i></p>
             <ul>
-             <li><input type="text" id="curr_pos" value=""placeholder="current position"/></li>
+             <li><input type="text" id="curr_pos" placeholder="current position"/></li>
             </ul>
             <hr>
             <p>My projects:</p>
             <ul>
-                <li><input type="text" id="project_info"  value="" placeholder="project info"/></li>
+                <li><input type="text" id="project_info" placeholder="project info"/></li>
             </ul>
             <hr>
             <p>Resume:</p>
             <p id="resume_status"></p>
-            <input type="file" name="fileToUpload" id="resume">
-               <br>
-            <input type="submit" value="upload resume" name="submit" id="upload_resume">
             <hr>
             <p>Get in touch:</p>
             <ul>
-                <li><input type="text" id="github_username"   value="" placeholder="Github"/></li>
-                <li><input type="text" id="personal_site"     value="" placeholder="Personal site"/></li>
-                <li><input type="text" id="linkedin_url"      value="" placeholder="LinkedIn"/></li>
-                <li><input type="text" id="insta_username"    value="" placeholder="Instagram"/></li>
+                <li><input type="text" id="github_username"   placeholder="Github"/></li>
+                <li><input type="text" id="personal_site"     placeholder="Personal site"/></li>
+                <li><input type="text" id="linkedin_url"      placeholder="LinkedIn"/></li>
+                <li><input type="text" id="insta_username"    placeholder="Instagram"/></li>
             </ul>
             <p class="center-align">
-                     <center><button class="button_signup button1" id="update_account"><font color="black">save</font></button></center>
-                  </p>
+            <button class="button_signup button1" id="update_account"><font color="black">save</font></button>
+            </p>
          </div>
       </div>
    </body>
-   <script type="text/javascript" src="js/app.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="../js/app.js"></script>
    <script>
       $(document).ready(function() {
-      
-        var next = 1;
-            $(".add-more").click(function(e){
-                e.preventDefault();
-                var addto = "#field" + next;
-                var addRemove = "#field" + (next);
-                next = next + 1;
-                var newIn = '<input autocomplete="off" class="input form-control" id="field' + next + '" name="field' + next + '" type="text">';
-                var newInput = $(newIn);
-                var removeBtn = '<button id="remove' + (next - 1) + '" class="btn btn-danger remove-me" >-</button></div><div id="field">';
-                var removeButton = $(removeBtn);
-                $(addto).after(newInput);
-                $(addRemove).after(removeButton);
-                $("#field" + next).attr('data-source',$(addto).attr('data-source'));
-                $("#count").val(next);  
-                
-                    $('.remove-me').click(function(e){
-                        e.preventDefault();
-                        var fieldNum = this.id.charAt(this.id.length-1);
-                        var fieldID = "#field" + fieldNum;
-                        $(this).remove();
-                        $(fieldID).remove();
-                    });
-            });
-      
-            //I'm assuming that the skills id is field1 and as you add more fields it would be field2, field3, field4 etc
-      
-        
-       //var name          = 'Ibrahim';
-       //var location      = 'Silver Spring';
-       //var occupation    = 'Engineer';
-       //var bio_line      = 'I turn coffee into code';
-       //var school        = 'UMBC';
-       //var education     = 'B.Sc Information Systems';
-       //var age           = '24';
-       //var height        = '6 1';
-       //var pol           = 'left';
-       //var fav_color     = 'black';
-       //var econ          = 'stable';
-       //var skills        = 'PHP, MySQL, HTML, CSS, JavaScript, SQL, React.js, Node.js, Ajax, C++, C, Python, Arduino, PL-SQL, Apache, Xampp , Laravel';
-       //var position      = 'Fullstack Developer Intern';
-       //var curr_company  = 'Groove Commerce';
-       var position_date = 'Oct 2017 Present';
-       var resume_status = 'viewable';
-       var connections   = 'Richard Rice, Kash G, Beruk A';
-      
-       document.getElementById("name").innerHTML = 'Hey! Im' +'&nbsp;' +  first_name ;
-       document.getElementById("caption").innerHTML = 'Im an' +'&nbsp;' + occupation + '&nbsp;' + 'based in' +'&nbsp;' +  city ;
-       document.getElementById("bio_line").innerHTML = micro_bio;
-       document.getElementById("school").innerHTML = 'Alma Mater:'  +'&nbsp;' + school;
-       document.getElementById("education").innerHTML = 'Education:'  +'&nbsp;' + education;
-       document.getElementById("age").innerHTML = 'Age:'  +'&nbsp;' + age;
-       document.getElementById("height").innerHTML = 'Height:'  +'&nbsp;' + height;
-       document.getElementById("pol_view").innerHTML = 'Politics float:'  +'&nbsp;' + pol_view;
-       document.getElementById("fav_color").innerHTML = 'Favorite color:'  +'&nbsp;' + fav_color;
-       document.getElementById("econ").innerHTML = 'Economy:'  +'&nbsp;' + econ;
-       document.getElementById("skills").innerHTML =  skills;
-       document.getElementById("position").innerHTML =  curr_pos;
-       document.getElementById("position_date").innerHTML =  position_date + '->';
-       document.getElementById("curr_company").innerHTML   =  curr_company;
-       document.getElementById("resume_status").innerHTML  =  'Resume:' + resume_status;
-       document.getElementById("connections").innerHTML  =  connections;
-       // placeholdr auto fill from vars
-
-       document.getElementById("name").placeholder                = first_name;
-      
+        document.getElementById("xid").value                = user_idx;
+        document.getElementById("first_name").value         = first_name;
+        document.getElementById("last_name").value          = last_name;
       
       
       

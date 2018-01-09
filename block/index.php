@@ -4,6 +4,7 @@
       <link rel="stylesheet" href="../css/reset.css" type="text/css">
       <link rel="stylesheet" href="../css/index.scss" type="text/css">
       <link rel="stylesheet" href="../css/nav.css" type="text/css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
       <meta http-equiv="content-type" content="text/html;charset=utf-8" />
       <meta charset="UTF-8" />
       <meta name="description" content="Developer." />
@@ -30,7 +31,141 @@
             {
                 border-radius: 50% !important;
             }
+
+            .toggle-nav {
+    display:none;
+}
+
+/*----- Menu -----*/
+@media screen and (min-width: 860px) {
+    .menu {
+        width:100%;
+        padding:10px 18px;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+    }
+}
+
+.menu ul {
+    display:inline-block;
+}
+
+.menu li {
+    margin:0px 50px 0px 0px;
+    float:left;
+    list-style:none;
+    font-size:17px;
+}
+
+.menu li:last-child {
+    margin-right:0px;
+}
+
+.menu a {
+    text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+    color:#777;
+    transition:color linear 0.15s;
+}
+
+.menu a:hover, .menu .current-item a {
+    text-decoration:none;
+    color:#66a992;
+}
+
+
+
+
+
+/*----- Responsive -----*/
+@media screen and (max-width: 1150px) {
+    .wrap {
+        width:90%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .search-form input {
+        width:120px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .menu {
+        position:relative;
+        display:inline-block;
+    }
+
+    .menu ul.active {
+        display:none;
+    }
+
+    .menu ul {
+        width:100%;
+        position:absolute;
+        top:120%;
+        left:0px;
+        padding:10px 18px;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+    }
+
+    .menu ul:after {
+        width:0px;
+        height:0px;
+        position:absolute;
+        top:0%;
+        left:22px;
+        content:'';
+        transform:translate(0%, -100%);
+        border-left:7px solid transparent;
+        border-right:7px solid transparent;
+        border-bottom:7px solid #303030;
+    }
+
+    .menu li {
+        margin:5px 0px 5px 0px;
+        float:none;
+        display:block;
+    }
+
+    .menu a {
+        display:block;
+    }
+
+    .toggle-nav {
+        padding:20px;
+        float:left;
+        display:inline-block;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+        text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+        color:#777;
+        font-size:20px;
+        transition:color linear 0.15s;
+    }
+
+    .toggle-nav:hover, .toggle-nav.active {
+        text-decoration:none;
+        color:#66a992;
+    }
+
+   
+}
       </style>
+
+<nav class="menu">
+    <ul class="active">
+        <li class="current-item"><a href="#">block</a></li>
+        <li><a href="../edit.block">edit</a></li>
+        <li><a href="#">search</a></li>
+        <li><a href="#">add</a></li>
+        <li><a href="../logout">logout</a></li>
+    </ul>
+    <a class="toggle-nav" href="#">&#9776;</a>
+</nav>
 
 <script text="text/javascript">
       //document.body.style.backgroundColor = "red";
@@ -77,9 +212,7 @@
          window.location.href = "login.html";
       }
 
-      if ($.trim(login_status) != null ) {
-         window.location.href = "login.html";
-      }
+     
 
    </script>
       <div id="app">
@@ -136,10 +269,11 @@
          </div>
       </div>
    </body>
-   <script type="text/javascript" src="js/app.js"></script>
-   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script type="text/javascript" src="../js/app.js"></script>
    <script>
       $(document).ready(function() {
+
+        
        //var name          = 'Ibrahim';
        //var location      = 'Silver Spring';
        //var occupation    = 'Engineer';
@@ -178,9 +312,18 @@
 
        document.getElementById('block_image').src = "../assets/block/b1.jpg";
       
+       //document.getElementById("block_image").src  =  '../assets/block' + block_pic;
       
+    
       
-      
+    jQuery(document).ready(function() {
+    jQuery('.toggle-nav').click(function(e) {
+        jQuery(this).toggleClass('active');
+        jQuery('.menu ul').toggleClass('active');
+
+        e.preventDefault();
+         });
+     });
       
       
       });
