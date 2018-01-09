@@ -183,7 +183,7 @@ $(document).ready(function () {
 		var id 		           = $("#id").val();
 		var first_name         = $("#first_name").val();
 		var last_name          = $("#last_name").val();
-		var ocupation          = $("#ocupation").val();
+		var occupation         = $("#occupation").val();
 		var city 	           = $("#city").val();
 		var font_type          = $("#font_type").val();
 		var font_size          = $("#font_size").val();

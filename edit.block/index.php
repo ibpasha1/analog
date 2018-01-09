@@ -124,7 +124,7 @@
                <input type="hidden" id="id">
                <li><input placeholder="" id="first_name" type="text" class="validate"></li>
                <li><input placeholder="" id="last_name"  type="text" class="validate"></li>
-               <li><input placeholder="" id="ocupation"  type="text" class="validate"></li>
+               <li><input placeholder="" id="occupation" type="text" class="validate"></li>
                <li><input placeholder="" id="city"       type="text" class="validate"></li>
       
               
@@ -231,6 +231,31 @@
         document.getElementById("id").value                 = user_id;
         document.getElementById("first_name").value         = first_name;
         document.getElementById("last_name").value          = last_name;
+        document.getElementById("occupation").value         = occupation;
+        document.getElementById("city").value               = city;
+        document.getElementById("font_type").value          = font_type;
+        document.getElementById("font_size").value          = font_size;
+        document.getElementById("bg_color").value           = bg_color;
+        document.getElementById("micro_bio").value          = micro_bio;
+        document.getElementById("school").value             = school;
+        document.getElementById("eduation").value           = eduation;
+        document.getElementById("Age").value                = Age;
+        document.getElementById("Height").value             = Height;
+        document.getElementById("pol_view").value           = pol_view;
+        document.getElementById("fav_color").value          = fav_color;
+        document.getElementById("econ").value               = econ;
+        document.getElementById("solid_sk").value           = solid_sk;
+        document.getElementById("mid_sk").value             = mid_sk;
+        document.getElementById("light_sk").value           = light_sk;
+        document.getElementById("curr_pos").value           = curr_pos;
+        document.getElementById("project_info").value       = project_info;
+        document.getElementById("resume").value             = resume;
+        document.getElementById("github_username").value    = github_username;
+        document.getElementById("personal_site").value      = personal_site;
+        document.getElementById("linkedin_url").value       = linkedin_url;
+        document.getElementById("insta_username").value     = insta_username;
+
+        
       
       
       
